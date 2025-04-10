@@ -1,0 +1,233 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-weight: 700;
+  font-size: 20px;
+  color: #003b7a;
+}
+
+.nav-menu a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: #007bff;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #003b7a;
+}
+
+.social-icons a {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+.border-divider {
+  border-right: 2px dashed #ccc;
+  position: relative;
+}
+.register-banner {
+  background: url('image/banner.png') center center / cover no-repeat;
+  position: relative;
+  min-height: 300px;
+}
+
+.register-banner .overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Mờ nền */
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+}
+
+.register-form .form-control {
+  border-radius: 50px;
+  padding-left: 40px;
+}
+
+.register-form .input-group-text {
+  border-radius: 50px 0 0 50px;
+  background-color: #fff;
+  border: none;
+}
+
+.register-form .input-group {
+  max-width: 300px;
+}
+
+.register-form button {
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .register-form {
+    flex-direction: column;
+  }
+
+  .register-form .input-group,
+  .register-form button {
+    width: 100%;
+  }
+}
+.main-footer {
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 15px;
+}
+
+.footer-contact li,
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-contact i,
+.footer-links i {
+  margin-right: 8px;
+  width: 20px;
+  text-align: center;
+}
+
+.footer-social a {
+  font-size: 18px;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.footer-social a:hover {
+  color: #007bff;
+}
+
+.main-footer h5 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .footer-social {
+    justify-content: center;
+  }
+
+  .main-footer {
+    text-align: center;
+  }
+}
+
+.floating-icons {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.floating-icons a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.floating-icons a:hover {
+  transform: scale(1.1);
+}
+
+.floating-icons img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.floating-icons {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.floating-icons a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.floating-icons a:hover {
+  transform: scale(1.1);
+}
+
+.floating-icons img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
