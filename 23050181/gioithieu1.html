@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VINFAST THAM DỰ TRIỂN LÃM Ô TÔ QUỐC TẾ GAIKINDO INDONESIA (GIAS) 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            padding-top: 60px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            color: #007bff;
+        }
+
+        .signup-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .signup-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-btn img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: contain; 
+        }
+
+        .zalo-btn {
+            background-color: #007bff;
+        }
+
+        .phone-btn {
+            background-color: #ff0000;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.2); 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+        }
+
+        /* News Section (Phần bài viết VinFast) */
+        .news-section {
+            padding: 20px;
+            margin-top: 60px; /* Để tránh bị che bởi header fixed */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .main-content {
+            flex: 1 1 65%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            flex: 1 1 30%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .date {
+            color: #007bff;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .title:hover {
+            color: #007bff;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .content p strong {
+            color: #333;
+        }
+
+        .sidebar h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .sidebar h3:hover {
+            color: #007bff;
+        }
+
+        .sidebar-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .sidebar-item img {
+            width: 100px;
+            height: 60px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .sidebar-item .text {
+            flex: 1;
+        }
+
+        .sidebar-item a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-item a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .sidebar-item .date {
+            font-size: 12px;
+            color: #007bff;
+        }
+
+        /* Responsive Design cho News Section */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .main-content,
+            .sidebar {
+                width: 100%;
+            }
+        }
+
+        /* Sign-up Section */
+        .signup-section {
+            position: relative;
+            padding: 40px 20px;
+            background-image: url("images/dangkithongtin.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .signup-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(20, 20, 20, 0.5);
+            z-index: 1;
+        }
+
+        .signup-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .signup-section h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .signup-section p {
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .signup-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .signup-form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        .signup-form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .signup-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .hinhAnh:hover {
+            transform: scale(1.05);
+        }
+
+        .socialPic {
+            border-radius: 15px;
+            border: solid 1px silver;
+        }
+
+        .socialPic:hover {
+            transform: scale(1.05);
+        }
+
+        .tieuDe:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header fixed-top">
+        <div class="logo">
+            <img src="images/vinfast.jpg" alt="VinFast Logo">
+        </div>
+        <nav class="nav">
+            <a href="#">TRANG CHỦ</a>
+            <a href="#">SẢN PHẨM</a>
+            <a href="#">KHUYẾN MÃI</a>
+            <a href="index.html" class="active">TIN TỨC</a>
+            <a href="#">LIÊN HỆ</a>
+        </nav>
+        <a href="#" class="signup-btn">Đăng ký lái thử</a>
+    </header>
+
+    <section class="news-section">
+        <div class="container">
+
+            <div class="main-content">
+                <div class="banner">
+                    <img src="images/gioithieu1.jpg" alt="VinFast Banner">
+                </div>
+                <div class="date">02/08/2024</div>
+                <h1 class="title">VINFAST THAM DỰ TRIỂN LÃM Ô TÔ QUỐC TẾ GAIKINDO INDONESIA (GIAS) 2024</h1>
+                <div class="content">
+                    <p><strong>Jakarta, Indonesia, ngày 07/08/2024</strong> – VinFast Auto công bố tham dự Triển lãm Ô tô Quốc tế GAIKINDO Indonesia (GIAS) 2024, diễn ra từ ngày 29/07/2024. Tại triển lãm lần này, VinFast sẽ giới thiệu các dòng xe điện thông minh và thân thiện với môi trường, khẳng định vị thế của mình trên thị trường quốc tế.</p>
+                    <p>Nổi bật trong gian hàng VinFast tại GIAS 2024 là các mẫu xe điện VF 5, VF e34, VF 6, VF 7, VF 8 và VF 9. Các dòng xe này không chỉ mang đến thiết kế hiện đại, công nghệ tiên tiến mà còn thể hiện cam kết của VinFast trong việc thúc đẩy giao thông xanh và bền vững.</p>
+                    <p>Với các mẫu xe như VF 5 và VF e34, VinFast mang đến sự lựa chọn đa dạng cho khách hàng từ phân khúc phổ thông đến cao cấp. VF 5 là mẫu xe điện cỡ nhỏ với thiết kế trẻ trung, phù hợp với khách hàng đô thị. Trong khi đó, VF e34 mang đến không gian rộng rãi, tiện nghi và khả năng vận hành mạnh mẽ, đáp ứng nhu cầu di chuyển đa dạng.</p>
+                    <p>Tại triển lãm GIAS, khách tham quan sẽ được trải nghiệm trực tiếp các mẫu xe VinFast thông qua chương trình “Living Unbound – Khám phá cuộc sống không giới hạn”. Đây là cơ hội để khách hàng cảm nhận rõ nét sự khác biệt của các dòng xe điện VinFast so với các thương hiệu khác.</p>
+                    <p>Ông Temmy Wiradjaja, Tổng giám đốc VinFast Indonesia, chia sẻ: “GIAS 2024 là cơ hội để VinFast giới thiệu các dòng xe điện thông minh và thân thiện với môi trường đến khách hàng Indonesia. Chúng tôi mong muốn mang đến những trải nghiệm lái xe thú vị, đồng thời góp phần thúc đẩy giao thông xanh và bền vững tại thị trường này.”</p>
+                    <p>GIIAS là triển lãm ô tô lớn nhất Indonesia và là một trong những triển lãm ô tô lớn nhất Đông Nam Á, thu hút sự tham gia của hàng trăm thương hiệu ô tô hàng đầu thế giới.</p>
+                    <p>Gian trưng bày của VinFast mở cửa đón khách tham quan từ ngày 18/07/2024 đến hết ngày 28/07/2024. Hoạt động lái thử mẫu xe VF 5 và VF e34 phiên bản tay lái nghịch cũng sẽ diễn ra từ ngày 18/07. Đây là cơ hội để người tiêu dùng Indonesia trực tiếp trải nghiệm thiết kế hiện đại và các tính năng công nghệ thông minh, an toàn của hai mẫu xe này.</p>
+                    <p>Đồng thời, khách tham quan tại gian hàng VinFast sẽ có cơ hội được gặp gỡ nữ diễn viên Hàn Quốc nổi tiếng Kim You Jung, đại sứ thương hiệu mới của VinFast cho mẫu VF 5, vào ngày 21/7. Thiết kế tinh tế, thân thiện môi trường, phù hợp với phong cách sống đô thị sành điệu chính là những điểm đặc sắc mẫu VF 5 thể hiện thông qua sự hợp tác toàn cầu với Kim You Jung.</p>
+                    <p>Chỉ vài tháng sau khi ra mắt thương hiệu tại thị trường Indonesia, VinFast đã chính thức mở bán mẫu ô tô điện VF 5 và VF e34, khai trương các cửa hàng đại lý đầu tiên và công bố kế hoạch xây dựng nhà máy xe điện ở Indonesia, bám sát chiến lược kinh doanh bài bản và khẳng định quyết tâm mở rộng tại quốc gia vạn đảo./.</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <h3>CÙNG VINFAST ĐƯỢC YÊU THÍCH NHẤT TRÊN SÂN KHẤU XE ĐIỆN TOÀN QUỐC</h3>
+                <div class="sidebar-item">
+                    <img src="images/gioithieu6.jpg" alt="Image 6">
+                    <div class="text">
+                        <a href="gioithieu6.html">Cùng VinFast xây dựng hệ sinh thái trạm sạc xe điện trên toàn quốc</a>
+                        <div class="date">31/03/2021</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    <img src="images/gioithieu5.jpg" alt="Image 5">
+                    <div class="text">
+                        <a href="gioithieu5.html">VinFast giới thiệu xe phiên bản giới hạn President</a>
+                        <div class="date">31/03/2021</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    <img src="images/gioithieu4.jpg" alt="Image 4">
+                    <div class="text">
+                        <a href="gioithieu4.html">Đang mở cổng quy đổi điểm VF Point thành tiền</a>
+                        <div class="date">02/08/2024</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    <img src="images/gioithieu3.jpg" alt="Image 3">
+                    <div class="text">
+                        <a href="gioithieu3.html">VinFast chính thức mở bán ô tô điện VF 5 tại Indonesia</a>
+                        <div class="date">02/08/2024</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    <img src="images/gioithieu2.jpg" alt="Image 2">
+                    <div class="text">
+                        <a href="gioithieu2.html">Vinfast ra mắt gói cước ưu đãi sạc điện cho khách hàng doanh nghiệp taxi</a>
+                        <div class="date">02/08/2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="signup-section">
+        <div class="signup-content">
+            <h1 style="color:white; font-weight: bold;">ĐĂNG KÝ NHẬN THÔNG TIN</h1>
+            <p style="color:white; font-weight: bold;">Đăng ký nhận thông tin chương trình khuyến mãi & giảm giá của Vinfast.</p>
+            <form class="signup-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Họ và tên" required>
+                    <input type="text" placeholder="Số điện thoại *" required>
+                </div>
+                <button type="submit" class="signup-btn">Đăng ký</button>
+            </form>
+            <p style="color:white; font-weight: bold;">Đại lý VinFast Bình Dương cam kết hỗ trợ khách hàng mua xe VinFast với giá tốt nhất trên toàn đại lý.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/vinfast.jpg" alt="VinFast Logo">
+            </div>
+            <div class="footer-info">
+                <h2>ĐẠI LÝ XE Ô TÔ ĐIỆN VINFAST BÌNH DƯƠNG</h2>
+                <p>Showroom và xưởng dịch vụ VinFast lớn nhất Bình Dương. Cam kết bảo giá xe ô tô điện VinFast tốt nhất trên toàn đại lý. Liên hệ ngay...!</p>
+    
+                <div class="footer-contact">
+                    <p>
+                        <img src="images/icon_dienthoai.png" alt="Phone Icon" class="contact-icon">
+                        Điện thoại: 0399.99.9999 (Báo giá tốt nhất)
+                    </p>
+                    <p>
+                        <img src="images/icon_dienthoai.png" alt="Phone Icon" class="contact-icon">
+                        Bảo dưỡng vui lòng gọi: 1800999
+                    </p>
+                    <p>
+                        <img src="images/icon_website.png" alt="Website Icon" class="contact-icon">
+                        Website: <a href="vinfast.github.io">vinfast.github.io</a>
+                    </p>
+                    <p>
+                        <img src="images/icon_diachi.png" alt="Location Icon" class="contact-icon">
+                        Địa chỉ: TP. Thủ Dầu Một, T. Bình Dương
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-links">
+            <h2>LIÊN KẾT NHANH</h2>
+            <a href="#">Chương trình khuyến mãi</a>
+            <a href="#">Bảng giá mới nhất</a>
+            <a href="#">Hỗ trợ trả góp</a>
+            <a href="#">Hỗ trợ đăng ký</a>
+            <a href="#">Đăng ký lái thử</a>
+        </div>
+    
+        <div class="footer-contact-social">
+            <h2>MẠNG XÃ HỘI</h2>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/VinFastOfficial">
+                    <img class="socialPic" src="images/facebook.jpg" alt="Facebook" style="width: 60px; height: 60px;">
+                </a>
+                <a href="https://www.instagram.com/VinFastOfficial">
+                    <img class="socialPic" src="images/instagram.jpg" alt="Instagram" style="width: 60px; height: 60px;">
+                </a>
+                <a href="https://www.youtube.com/VinFastOfficial">
+                    <img class="socialPic" src="images/youtube.jpg" alt="YouTube" style="width: 60px; height: 60px;">
+                </a>
+                <a href="https://www.tiktok.com/@VinFastOfficial">
+                    <img class="socialPic" src="images/tiktok.jpg" alt="TikTok" style="width: 60px; height: 60px;">
+                </a>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>VinFast Bình Dương ©2024. Design by HPSVietnam</p>
+            <img src="images/bocongthuong.jpg" alt="Certified Icon">
+        </div>
+    </div>
+    
+        <div class="contact-buttons">
+            <a href="https://id.zalo.me" class="contact-btn zalo-btn">
+                <img src="images/Zalo.jpg" alt="Zalo">
+            </a>
+            <a href="0399.99.9999" class="contact-btn phone-btn">
+                <img src="images/dienthoai.jpg" alt="Phone">
+            </a>
+        </div>
+    </footer>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const nav = document.querySelector('.nav');
+
+        mobileMenu.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

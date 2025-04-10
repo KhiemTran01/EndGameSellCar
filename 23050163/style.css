@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica Neue", Arial;
+  color: black;
+}
+
+.navbar-nav .nav-item :hover {
+  color: #277cea;
+}
+
+.navbar-nav .nav-item {
+  padding: 5px;
+}
+
+.nav-item-custom:hover {
+  border-bottom: 2px solid #277cea;
+}
+
+.card-body .card-title strong:hover {
+  color: #277cea;
+}
+
+.card-body a {
+  text-decoration: none;
+}
+
+.product strong {
+  color: #277cea;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.product small {
+  color: grey;
+  font-size: 11px;
+}
+
+.card-body .card-title strong {
+  text-transform: uppercase;
+}
+
+.product {
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.name_Car {
+  color: grey;
+  text-transform: uppercase;
+  text-align: start;
+  font-size: large;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+}
+
+.name_Car:hover {
+  color: black;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+}
+
+.pic-Touched {
+  transition: transform 0.3s ease;
+}
+
+.pic-Touched:hover {
+  transform: scale(1.05);
+}
+
+.title_Name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.tinTuc {
+  text-align: start;
+}
+
+.touch_blue {
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.touch_blue:hover {
+  color: #277cea;
+}
+
+.backgroud-tieuDe {
+  height: 750px;
+  width: 100%;
+  opacity: 0.3;
+}
+
+.content-Sale {
+  color: rgb(32, 32, 32);
+}
+
+.content-Sale a {
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.content-Sale small {
+  color: rgb(72, 72, 72);
+  font-size: 13px;
+}
+
+.content-Sale strong {
+  color: rgb(59, 59, 59);
+}
+
+.content-Sale .times {
+  background-color: #277cea;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.border-end-dashed {
+  border-right: 2px dashed white;
+}
+
+.call-Icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  padding: 25px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  z-index: 10;
+  opacity: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150%;
+
+  animation: pulseCall 1.5s infinite;
+}
+
+@keyframes pulseCall {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+    opacity: 65%;
+    transform: rotate(0deg);
+  }
+  1% {
+    transform: rotate(-10deg);
+  }
+  1.5% {
+    transform: rotate(-15deg);
+  }
+  2% {
+    transform: rotate(-20deg);
+  }
+  2.5% {
+    transform: rotate(-25deg);
+  }
+  3% {
+    transform: rotate(-20deg);
+  }
+  3.5% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(-10deg);
+  }
+  4.5% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(10deg);
+  }
+  5.5% {
+    transform: rotate(15deg);
+  }
+  6% {
+    transform: rotate(20deg);
+  }
+  6.5% {
+    transform: rotate(25deg);
+  }
+  7% {
+    transform: rotate(20deg);
+  }
+  7.5% {
+    transform: rotate(15deg);
+  }
+  8% {
+    transform: rotate(10deg);
+  }
+  8.5% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(255, 0, 0, 0);
+    opacity: 85%;
+    transform: rotate(0deg);
+  }
+}
+
+.zalo-Icon {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(39, 124, 234);
+  padding: 25px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  z-index: 10;
+  opacity: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150%;
+
+  animation: pulseZalo 1.5s infinite;
+}
+
+@keyframes pulseZalo {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(39, 124, 234, 0.7);
+    opacity: 65%;
+    transform: rotate(0deg);
+  }
+  1% {
+    transform: rotate(-10deg);
+  }
+  1.5% {
+    transform: rotate(-15deg);
+  }
+  2% {
+    transform: rotate(-20deg);
+  }
+  2.5% {
+    transform: rotate(-25deg);
+  }
+  3% {
+    transform: rotate(-20deg);
+  }
+  3.5% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(-10deg);
+  }
+  4.5% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(10deg);
+  }
+  5.5% {
+    transform: rotate(15deg);
+  }
+  6% {
+    transform: rotate(20deg);
+  }
+  6.5% {
+    transform: rotate(25deg);
+  }
+  7% {
+    transform: rotate(20deg);
+  }
+  7.5% {
+    transform: rotate(15deg);
+  }
+  8% {
+    transform: rotate(10deg);
+  }
+  8.5% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(39, 124, 234, 0);
+    opacity: 85%;
+    transform: rotate(0deg);
+  }
+}
+
+.social-Icon {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  background-color: rgb(225, 225, 225);
+  color: rgb(104, 104, 104);
+  border-radius: 50%;
+  font-size: 100%;
+}
+
+.social-Icon:hover {
+  background-color: rgb(64, 64, 64);
+  color: rgb(239, 239, 239);
+}
+
+.custom-dropdown {
+  position: absolute;
+  left: 0;
+  transform: translateX(-30%);
+  width: 90vw;
+  max-width: 1200px;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  display: none;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}

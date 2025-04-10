@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VINFAST GIỚI THIỆU XE PHIÊN BẢN GIỚI HẠN PRESIDENT</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            padding-top: 60px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            color: #007bff;
+        }
+
+        .signup-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .signup-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-btn img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: contain; 
+        }
+
+        .zalo-btn {
+            background-color: #007bff;
+        }
+
+        .phone-btn {
+            background-color: #ff0000;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.2); 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+        }
+
+        /* News Section (Phần bài viết VinFast) */
+        .news-section {
+            padding: 20px;
+            margin-top: 60px; /* Để tránh bị che bởi header fixed */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .main-content {
+            flex: 1 1 65%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            flex: 1 1 30%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .date {
+            color: #007bff;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .title:hover {
+            color: #007bff;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .content p strong {
+            color: #333;
+        }
+
+        .sidebar h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .sidebar h3:hover {
+            color: #007bff;
+        }
+
+        .sidebar-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .sidebar-item img {
+            width: 100px;
+            height: 60px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .sidebar-item .text {
+            flex: 1;
+        }
+
+        .sidebar-item a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .sidebar-item a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .sidebar-item .date {
+            font-size: 12px;
+            color: #007bff;
+        }
+
+        /* Responsive Design cho News Section */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .main-content,
+            .sidebar {
+                width: 100%;
+            }
+        }
+
+        /* Sign-up Section */
+        .signup-section {
+            position: relative;
+            padding: 40px 20px;
+            background-image: url("images/dangkithongtin.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .signup-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(20, 20, 20, 0.5);
+            z-index: 1;
+        }
+
+        .signup-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .signup-section h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .signup-section p {
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .signup-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .signup-form input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        .signup-form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .signup-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .hinhAnh:hover {
+            transform: scale(1.05);
+        }
+
+        .socialPic {
+            border-radius: 15px;
+            border: solid 1px silver;
+        }
+
+        .socialPic:hover {
+            transform: scale(1.05);
+        }
+
+        .tieuDe:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header fixed-top">
+        <div class="logo">
+            <img src="images/vinfast.jpg" alt="VinFast Logo">
+        </div>
+        <nav class="nav">
+            <a href="#">TRANG CHỦ</a>
+            <a href="#">SẢN PHẨM</a>
+            <a href="#">KHUYẾN MÃI</a>
+            <a href="index.html" class="active">TIN TỨC</a>
+            <a href="#">LIÊN HỆ</a>
+        </nav>
+        <a href="#" class="signup-btn">Đăng ký lái thử</a>
+    </header>
+
+    <section class="news-section">
+        <div class="container">
+
+            <div class="main-content">
+                <div class="banner">
+                    <img src="images/gioithieu5.jpg" alt="VinFast Banner">
+                </div>
+                <div class="date">31/03/2021</div>
+                <h1 class="title">VINFAST GIỚI THIỆU XE PHIÊN BẢN GIỚI HẠN PRESIDENT </h1>
+                <div class="content">
+                    <p>Ngày 7/9/2020, Công ty TNHH Kinh doanh Thương mại và Dịch vụ VinFast chính thức công bố mẫu SUV VinFast President phiên bản giới hạn. Với động cơ V8 6.2L, tốc độ tối đa gần 300 km/h, VinFast President là một trong những mẫu xe thương mại mạnh mẽ nhất hiện nay, biểu trưng cho đẳng cấp, chất lượng của thương hiệu ô tô Việt Nam sau hai năm ra mắt.</p>
+                    <p>VinFast President có giá 4,6 tỷ đồng, là dòng xe đặc biệt được sản xuất với số lượng giới hạn chỉ 500 chiếc, dành riêng cho thị trường Việt Nam. 100 khách hàng đầu tiên đặt mua xe sẽ được hưởng mức giá ưu đãi đặc biệt là 3,8 tỷ đồng. Với President, VinFast mong muốn giới thiệu một mẫu xe đẳng cấp, chất lượng cao đến những người Việt Nam thành đạt, tiên phong và có tinh thần tự tôn dân tộc.</p>
+                    <p>Chú trọng đặc biệt đến sự tiện nghi, thoải mái và hiệu năng sử dụng, VinFast President sở hữu chiều dài cơ sở dẫn đầu phân khúc, lên tới 3.133 mm, mang lại không gian rộng rãi tối đa cho hàng ghế sau, cùng động cơ V8 6.2L mạnh mẽ bậc nhất thế giới. Với công suất tối đa 420 mã lực, mô-men xoắn cực đại 624 Nm, kết hợp cùng hộp số tự động 8 cấp và hệ dẫn động 4 bánh toàn thời gian, VinFast President có thể tăng tốc từ 0-100 km/h trong 6,8 giây, đạt vận tốc tối đa gần 300 km/h.</p>
+                    <p>Đi cùng khả năng bứt tốc mạnh mẽ, VinFast President cũng được trang bị những tính năng an toàn hàng đầu như hệ thống hỗ trợ lực phanh khẩn cấp (BA), phân bổ lực phanh điện tử (EBD), cân bằng điện tử (ESC), kiểm soát lực kéo (TCS), hỗ trợ đổ đèo (HDC), chống lật (ROM), cảnh báo điểm mù, cảnh báo lệch làn đường, hay hệ thống camera 360 quanh thân xe.</p>
+                    <p>Về ngoại thất, VinFast President sở hữu thiết kế khỏe khoắn, mạnh mẽ và sang trọng. Lưới tản nhiệt được thiết kế dạng kim cương, kết hợp với hốc gió cỡ lớn trên nắp capo làm tôn lên vẻ mạnh mẽ cho tổng thể chiếc xe.</p>
+                    <p>Các đường gân nổi dọc hai bên thân xe và trên nắp capo không chỉ mang đến sự khỏe khoắn mà còn giúp tối ưu tính khí động học cho xe. Ở phía sau, VinFast President được trang bị cặp ống xả kép cỡ lớn đậm chất thể thao, hỗ trợ đắc lực cho động cơ V8 vận hành trơn tru và đạt hiệu suất tối ưu.</p>
+                    <p>Đặc biệt, để phục vụ nhu cầu cá nhân hóa theo sở thích của từng chủ xe, VinFast President có tới 18 màu sơn ngoại thất, cùng các chi tiết tạo điểm nhấn có thể lựa chọn phủ màu vàng (Gold), đồng (Copper), xám (Gun Metal) hay bạc (Metallic Silver) trên logo, giá nóc, nẹp cửa, bậc lên xuống, la-zăng hay cản trước, cản sau.</p>
+                    <p>Về nội thất, VinFast President chú trọng vào sự thoải mái của cả người lái và người ngồi hàng ghế sau với các tính năng massage, sưởi và thông gió cho hàng ghế thứ nhất và thứ hai. Đặc biệt, hàng ghế thứ 2 rất rộng rãi với khoảng duỗi chân được tăng thêm tới 20 cm so với mẫu Lux SA2.0.</p>
+                    <p>Nội thất trên xe sử dụng da Nappa cao cấp đến từ Eagle Ottawa – nhà cung cấp da độc quyền toàn cầu, cùng loại gỗ ốp Veneer thượng hạng được sản xuất tại Ý. Với cấu trúc vân xoáy tự nhiên, gỗ ốp trên mỗi chiếc VinFast President sẽ có hoa văn hoàn toàn khác biệt.</p>
+                    <p>Phát biểu nhân sự kiện ra mắt dòng sản phẩm đặc biệt VinFast President, bà Thái Thị Thanh Hải – Tổng giám đốc Công ty VinFast cho biết: “President là dòng sản phẩm mang tính biểu trưng cho đẳng cấp, chất lượng của VinFast, đồng thời là lời khẳng định của chúng tôi với thế giới về năng lực sản xuất ô tô của người Việt Nam”.</p>
+                    <p>VinFast President sẽ lần lượt được trưng bày tại các showroom, đại lý lớn trên khắp 3 miền Bắc – Trung – Nam từ ngày 7/9/2020, để khách hàng đến tham quan, trải nghiệm và đặt mua sản phẩm.</p>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <h3>CÙNG VINFAST ĐƯỢC YÊU THÍCH NHẤT TRÊN SÂN KHẤU XE ĐIỆN TOÀN QUỐC</h3>
+                <div class="sidebar-item">
+                    <img src="images/gioithieu6.jpg" alt="Image 6">
+                    <div class="text">
+                        <a href="gioithieu6.html">Cùng VinFast xây dựng hệ sinh thái trạm sạc xe điện trên toàn quốc</a>
+                        <div class="date">31/03/2021</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    <img src="images/gioithieu1.jpg" alt="Image 1">
+                    <div class="text">
+                        <a href="gioithieu1.html">Vinfast tham dự triển lãm ô tô quốc tế Gaikindo Indonesia (Giias) 2024</a>
+                        <div class="date">02/08/2024</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    <img src="images/gioithieu4.jpg" alt="Image 4">
+                    <div class="text">
+                        <a href="gioithieu4.html">Đang mở cổng quy đổi điểm VF Point thành tiền</a>
+                        <div class="date">02/08/2024</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    <img src="images/gioithieu3.jpg" alt="Image 3">
+                    <div class="text">
+                        <a href="gioithieu3.html">VinFast chính thức mở bán ô tô điện VF 5 tại Indonesia</a>
+                        <div class="date">02/08/2024</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    <img src="images/gioithieu2.jpg" alt="Image 2">
+                    <div class="text">
+                        <a href="gioithieu2.html">Vinfast ra mắt gói cước ưu đãi sạc điện cho khách hàng doanh nghiệp taxi</a>
+                        <div class="date">02/08/2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="signup-section">
+        <div class="signup-content">
+            <h1 style="color:white; font-weight: bold;">ĐĂNG KÝ NHẬN THÔNG TIN</h1>
+            <p style="color:white; font-weight: bold;">Đăng ký nhận thông tin chương trình khuyến mãi & giảm giá của Vinfast.</p>
+            <form class="signup-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Họ và tên" required>
+                    <input type="text" placeholder="Số điện thoại *" required>
+                </div>
+                <button type="submit" class="signup-btn">Đăng ký</button>
+            </form>
+            <p style="color:white; font-weight: bold;">Đại lý VinFast Bình Dương cam kết hỗ trợ khách hàng mua xe VinFast với giá tốt nhất trên toàn đại lý.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/vinfast.jpg" alt="VinFast Logo">
+            </div>
+            <div class="footer-info">
+                <h2>ĐẠI LÝ XE Ô TÔ ĐIỆN VINFAST BÌNH DƯƠNG</h2>
+                <p>Showroom và xưởng dịch vụ VinFast lớn nhất Bình Dương. Cam kết bảo giá xe ô tô điện VinFast tốt nhất trên toàn đại lý. Liên hệ ngay...!</p>
+    
+                <div class="footer-contact">
+                    <p>
+                        <img src="images/icon_dienthoai.png" alt="Phone Icon" class="contact-icon">
+                        Điện thoại: 0399.99.9999 (Báo giá tốt nhất)
+                    </p>
+                    <p>
+                        <img src="images/icon_dienthoai.png" alt="Phone Icon" class="contact-icon">
+                        Bảo dưỡng vui lòng gọi: 1800999
+                    </p>
+                    <p>
+                        <img src="images/icon_website.png" alt="Website Icon" class="contact-icon">
+                        Website: <a href="vinfast.github.io">vinfast.github.io</a>
+                    </p>
+                    <p>
+                        <img src="images/icon_diachi.png" alt="Location Icon" class="contact-icon">
+                        Địa chỉ: TP. Thủ Dầu Một, T. Bình Dương
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-links">
+            <h2>LIÊN KẾT NHANH</h2>
+            <a href="#">Chương trình khuyến mãi</a>
+            <a href="#">Bảng giá mới nhất</a>
+            <a href="#">Hỗ trợ trả góp</a>
+            <a href="#">Hỗ trợ đăng ký</a>
+            <a href="#">Đăng ký lái thử</a>
+        </div>
+    
+        <div class="footer-contact-social">
+            <h2>MẠNG XÃ HỘI</h2>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/VinFastOfficial">
+                    <img class="socialPic" src="images/facebook.jpg" alt="Facebook" style="width: 60px; height: 60px;">
+                </a>
+                <a href="https://www.instagram.com/VinFastOfficial">
+                    <img class="socialPic" src="images/instagram.jpg" alt="Instagram" style="width: 60px; height: 60px;">
+                </a>
+                <a href="https://www.youtube.com/VinFastOfficial">
+                    <img class="socialPic" src="images/youtube.jpg" alt="YouTube" style="width: 60px; height: 60px;">
+                </a>
+                <a href="https://www.tiktok.com/@VinFastOfficial">
+                    <img class="socialPic" src="images/tiktok.jpg" alt="TikTok" style="width: 60px; height: 60px;">
+                </a>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>VinFast Bình Dương ©2024. Design by HPSVietnam</p>
+            <img src="images/bocongthuong.jpg" alt="Certified Icon">
+        </div>
+    </div>
+    
+        <div class="contact-buttons">
+            <a href="https://id.zalo.me" class="contact-btn zalo-btn">
+                <img src="images/Zalo.jpg" alt="Zalo">
+            </a>
+            <a href="0399.99.9999" class="contact-btn phone-btn">
+                <img src="images/dienthoai.jpg" alt="Phone">
+            </a>
+        </div>
+    </footer>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const nav = document.querySelector('.nav');
+
+        mobileMenu.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
