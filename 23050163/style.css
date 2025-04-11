@@ -138,8 +138,8 @@
 
 .call-Icon {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
   width: 50px;
   height: 50px;
   background-color: red;
@@ -225,8 +225,8 @@
 
 .zalo-Icon {
   position: fixed;
-  bottom: 100px;
-  right: 20px;
+  bottom: 105px;
+  right: 25px;
   width: 50px;
   height: 50px;
   background-color: rgb(39, 124, 234);
@@ -323,27 +323,4 @@
 .social-Icon:hover {
   background-color: rgb(64, 64, 64);
   color: rgb(239, 239, 239);
-}
-
-.custom-dropdown {
-  position: absolute;
-  left: 0;
-  transform: translateX(-30%);
-  width: 90vw;
-  max-width: 1200px;
-  max-height: 70vh;
-  overflow-y: auto;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-  display: none;
-}
-
-.dropdown-toggle::after {
-  display: none;
-}
-.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
 }
