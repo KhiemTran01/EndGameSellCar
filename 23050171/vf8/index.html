@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VinFast VF8</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1 class="h4 mb-3 fw-bold">VINFAST VF8</h1>
+          <p class="text-muted small">
+            Tin vui cho những ai đang chờ mua xe VinFast! VinFast chính thức chỉ
+            bán xe kèm pin. Giá xe VinFast giảm mạnh, giá bán tốt nhất từ trước
+            đến nay!
+          </p>
+
+          <table class="table table-bordered mb-4">
+            <thead>
+              <tr>
+                <th>Phiên bản</th>
+                <th class="text-end">Giá bán VNĐ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>VF8 Eco (kèm Pin)</td>
+                <td class="text-end fw-bold text-danger">1.019.000.000</td>
+              </tr>
+              <tr>
+                <td>VF8 Plus (kèm Pin)</td>
+                <td class="text-end fw-bold text-danger">1.199.000.000</td>
+              </tr>
+              <tr>
+                <td>Bộ sạc với công suất AC 11 kW</td>
+                <td class="text-end">12.000.000</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <section class="mb-4 p-3 border rounded bg-light">
+            <h2 class="h5 fw-bold mb-3">
+              <i class="bi bi-tags-fill text-primary me-2"></i>KHUYẾN MÃI
+              VINFAST VF8 04/2025
+            </h2>
+            <p class="small">
+              Khuyến mãi Vinfast VF8 Eco giảm 101 triệu và VF8 Plus giảm trực
+              tiếp giá bán 100 triệu đồng. Miễn phí sạc Pin đến 30/06/2027.
+              Vinfast VF8 giảm 100% phí trước bạ tiết kiệm đến 120 triệu. Xe có
+              sẵn, đủ phiên bản và màu sắc. Mua xe VF8 trả góp trả trước
+              280.000.000đ lãi suất trả góp hấp dẫn, chỉ từ 0.6%. Chi tiết liên
+              hệ..!
+            </p>
+            <ul class="list-unstyled small">
+              <li class="mb-1">
+                <i class="bi bi-telephone-fill text-success me-1"></i> Chi tiết
+                khuyến mãi:
+                <a
+                  href="tel:0914892412"
+                  class="fw-bold text-decoration-none text-danger"
+                  >0914.892.412</a
+                >
+                <button class="btn btn-sm btn-outline-primary py-0 ms-1">
+                  Tìm gọi
+                </button>
+                {/* Updated Phone Number */}
+              </li>
+              <li>
+                <i class="bi bi-geo-alt-fill text-info me-1"></i> Đại lý Vinfast
+                Nam Thái Bình Dương : số T6/27 Đại lộ Bình Dương, KP. Bình Đức
+                2, P. Bình Hòa, TP. Thuận An, T. Bình Dương
+              </li>
+            </ul>
+          </section>
+
+          <section class="mb-4 p-3 border rounded">
+            <h2 class="h5 fw-bold mb-3">
+              <i class="bi bi-calculator-fill text-primary me-2"></i>GIÁ LĂN
+              BÁNH VINFAST VF8 04/2025
+            </h2>
+            <p class="small text-muted">
+              Nhận bảng giá lăn bánh chi tiết sau khi đã áp dụng chương trình
+              khuyến mãi Vinfast Nam Thái Bình Dương 04/2025:
+            </p>
+            <form id="price-form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="customerName" class="form-label small"
+                    >Khách hàng <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="customerName"
+                    placeholder="Họ và tên"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="customerPhone" class="form-label small"
+                    >Liên hệ <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control form-control-sm"
+                    id="customerPhone"
+                    placeholder="Số điện thoại"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="customerCity" class="form-label small"
+                    >Tỉnh/ Thành phố</label
+                  >
+                  <select class="form-select form-select-sm" id="customerCity">
+                    <option value="BD" selected>T. Bình Dương</option>
+                    <option value="BP">T. Bình Phước</option>
+                    <option value="HCM">TP. Hồ Chí Minh</option>
+                    <option value="Khac">Tỉnh thành khác</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="purchaseTime" class="form-label small"
+                    >Thời điểm mua xe dự kiến</label
+                  >
+                  <select class="form-select form-select-sm" id="purchaseTime">
+                    <option value="" selected disabled>
+                      -- Chọn thời điểm --
+                    </option>
+                    <option value="thangnay">Trong tháng này</option>
+                    <option value="thangsau">Trong tháng sau</option>
+                    <option value="6thangtoi">Trong 6 tháng tới</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-sm">
+                    Nhận bảng giá <i class="bi bi-arrow-right-short"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </section>
+
+          <section class="mb-4">
+            <h2 class="h5 fw-bold mb-3">
+              Tổng quan VinFast VF 8 - Mẫu eSUV cỡ trung thời thượng
+            </h2>
+            <p class="small">
+              VF 8 đạt đến sự kết hợp hoàn hoàn hảo giữa chất lượng và giá trị
+              thông qua công nghệ cao cấp, kỹ thuật sản xuất đặc biệt và dịch vụ
+              tận tâm.
+            </p>
+
+            <h3 class="h6 fw-bold mt-4">Được thiết kế dành cho bạn</h3>
+            <p class="small">
+              Tỉ lệ thiết kế hiện đại định hình bởi triết lý “Cân bằng động”.
+              Những khối cong mềm mại chấm phá bởi các đường cắt sắc nét tạo nên
+              ấn tượng mạnh mẽ, mang đầy hơi thở của tương lai.
+            </p>
+
+            <h3 class="h6 fw-bold mt-4">Sự đặc biệt trong tầm tay</h3>
+            <p class="small">
+              Không gian nội thất tinh tế được thiết kế bởi studio danh tiếng
+              Pininfarina, tích hợp loạt công nghệ tiên tiến giúp cho mỗi chuyến
+              đi của bạn là một trải nghiệm đầy ấn tượng.
+            </p>
+
+            <h3 class="h6 fw-bold mt-4">Công nghệ cho cuộc sống</h3>
+            <p class="small">
+              Hợp tác cùng những đối tác hàng đầu trên toàn cầu, VinFast áp dụng
+              những công nghệ hiện đại với thiết kế tập trung vào con người, đem
+              lại trải nghiệm Trợ lý ảo cùng loạt Dịch vụ thông minh tiên tiến,
+              đồng hành cùng bạn hướng tới tương lai tốt đẹp hơn.
+            </p>
+
+            <h3 class="h6 fw-bold mt-4">Hệ thống trợ lái nâng cao</h3>
+            <p class="small">
+              Ứng dụng công nghệ và trang thiết bị hiện đại nhất, hệ thống trợ
+              lái nâng cao VinFast đem lại trải nghiệm lái thư thái, dễ dàng để
+              bạn an tâm tận hưởng cuộc sống.
+            </p>
+
+            <h3 class="h6 fw-bold mt-4">Trạm sạc và Pin</h3>
+            <p class="small">
+              VinFast cung cấp đa dạng giải pháp sạc để đáp ứng nhu cầu sử dụng
+              của Khách hàng một cách thuận tiện nhất.
+            </p>
+          </section>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="list-group sidebar-nav">
+            <a
+              href="../../23050163/khuyenMai.html"
+              class="list-group-item list-group-item-action d-flex align-items-center"
+            >
+              <i class="bi bi-gift-fill fs-3 me-3 text-primary"></i>
+              <div>
+                <div class="fw-bold">KHUYẾN MÃI 04/2025</div>
+                <small class="text-muted"
+                  >Chương trình khuyến mãi tiền mặt từ 50 đến hơn 100 triệu đồng
+                  tùy dòng xe...</small
+                >
+              </div>
+            </a>
+            <a
+              href="../../23050163/sanPham.html"
+              class="list-group-item list-group-item-action d-flex align-items-center"
+            >
+              <i class="bi bi-tags-fill fs-3 me-3 text-primary"></i>
+              <div>
+                <div class="fw-bold">BẢNG GIÁ MỚI NHẤT</div>
+                <small class="text-muted"
+                  >Đại lý VinFast Bình Dương cam kết hỗ trợ khách hàng mua xe
+                  VinFast với giá tốt nhất...</small
+                >
+              </div>
+            </a>
+            <a
+              href="../../23050163/hoTroTraGop.html"
+              class="list-group-item list-group-item-action d-flex align-items-center"
+            >
+              <i class="bi bi-calculator-fill fs-3 me-3 text-primary"></i>
+              <div>
+                <div class="fw-bold">HỖ TRỢ TRẢ GÓP</div>
+                <small class="text-muted"
+                  >Kết nối khách hàng mua xe điện VinFast trả góp lãi suất thấp
+                  nhất, ban đầu bỏ số...</small
+                >
+              </div>
+            </a>
+            <a
+              href="../../23050163/dangKyLaiThu.html"
+              class="list-group-item list-group-item-action d-flex align-items-center"
+            >
+              <i class="bi bi-clipboard-check-fill fs-3 me-3 text-primary"></i>
+              <div>
+                <div class="fw-bold">ĐĂNG KÝ LÁI THỬ</div>
+                <small class="text-muted"
+                  >Lái thử và cảm nhận các dòng xe VinFast miễn phí tại Đại lý
+                  VinFast Bình Dương. Liên hệ đặt lịch lái thử.</small
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
