@@ -14,6 +14,9 @@ document
 
     const phoneRegex = /^(0[3|5|7|8|9])+([0-9]{8})$/;
 
+    let modalContent = document.getElementById("noiDungModal");
+    let modal = new bootstrap.Modal(document.getElementById("thongBaoModal"));
+
     if (
       name === "" ||
       phoneNumber === "" ||
@@ -22,22 +25,31 @@ document
       ngayLai === "" ||
       buoiLai === ""
     ) {
-      alert("Vui lòng nhập đầy đủ thông tin.");
+      modalContent.innerHTML = `<div class="alert alert-warning">Vui lòng nhập đầy đủ thông tin.</div>`;
+      modal.show();
       return;
     }
 
     if (!phoneRegex.test(phoneNumber)) {
-      alert("Số điện thoại chưa hợp lệ!");
+      modalContent.innerHTML = `<div class="alert alert-danger">Số điện thoại chưa hợp lệ!</div>`;
+      modal.show();
       return;
     }
 
-    let message = `Chúc mừng ${name} đăng ký thành công!
-    Số điện thoại: ${phoneNumber}
-    Khu vực: ${tinh}
-    Dòng xe quan tâm: ${loaiXe}
-    Ngày: ${ngayLai}
-    Buổi lái thử: ${buoiLai}`;
+    let message = `
+      <div class="alert alert-success">
+        <p>Chúc mừng <strong>${name}</strong> đã đăng ký lái thử thành công!</p>
+        <ul class="list-unstyled">
+          <li><strong>Số điện thoại:</strong> ${phoneNumber}</li>
+          <li><strong>Khu vực:</strong> ${tinh}</li>
+          <li><strong>Dòng xe:</strong> ${loaiXe}</li>
+          <li><strong>Ngày lái thử:</strong> ${ngayLai}</li>
+          <li><strong>Buổi:</strong> ${buoiLai}</li>
+        </ul>
+      </div>
+    `;
 
-    alert(message);
+    modalContent.innerHTML = message;
+    modal.show();
     form.reset();
   });

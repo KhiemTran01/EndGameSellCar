@@ -14,6 +14,9 @@ document
 
     const phoneRegex = /^(0[3|5|7|8|9])+([0-9]{8})$/;
 
+    let modalContent = document.getElementById("noiDungModal");
+    let modal = new bootstrap.Modal(document.getElementById("thongBaoModal"));
+
     if (
       name === "" ||
       phoneNumber === "" ||
@@ -22,19 +25,20 @@ document
       thoiDiemMua === "" ||
       traGop === ""
     ) {
-      alert("Vui lòng nhập đầy đủ thông tin.");
+      modalContent.innerHTML = `<div class="alert alert-warning">Vui lòng nhập đầy đủ thông tin.</div>`;
+      modal.show();
       return;
     }
 
     if (!phoneRegex.test(phoneNumber)) {
-      alert("Số điện thoại chưa hợp lệ!");
+      modalContent.innerHTML = `<div class="alert alert-danger">Số điện thoại chưa hợp lệ!</div>`;
+      modal.show();
       return;
     }
 
     let selectedOffers = [];
     for (let i = 1; i <= 2; i++) {
       let checkbox = document.getElementById(`check${i}`);
-      let label = document.querySelector(`label[for='validationFormCheck1']`);
       if (checkbox && checkbox.checked) {
         let labelText =
           checkbox.nextElementSibling?.innerText ||
@@ -43,16 +47,26 @@ document
       }
     }
 
-    let message = `Thông tin tư vấn sẽ được gửi đến ${name} thông qua số điện thoại ${phoneNumber}!
-    Khu vực: ${tinh}
-    Dòng xe quan tâm: ${loaiXe}
-    Dự kiến mua xe: ${thoiDiemMua}
-    Hình thức thanh toán: ${traGop}`;
+    let message = `
+      <div class="alert alert-success">
+        <p>Thông tin tư vấn sẽ được gửi đến <strong>${name}</strong> thông qua số điện thoại: <strong>${phoneNumber}</strong></p>
+        <ul class="list-unstyled">
+          <li><strong>Khu vực:</strong> ${tinh}</li>
+          <li><strong>Dòng xe:</strong> ${loaiXe}</li>
+          <li><strong>Dự kiến mua:</strong> ${thoiDiemMua}</li>
+          <li><strong>Hình thức thanh toán:</strong> ${traGop}</li>
+        </ul>
+        ${
+          selectedOffers.length > 0
+            ? `<p><strong>Thông tin đã chọn:</strong><br>${selectedOffers.join(
+                "<br>"
+              )}</p>`
+            : ""
+        }
+      </div>
+    `;
 
-    if (selectedOffers.length > 0) {
-      message += `\nThông tin đã chọn:\n${selectedOffers.join("\n")}`;
-    }
-
-    alert(message);
+    modalContent.innerHTML = message;
+    modal.show();
     form.reset();
   });

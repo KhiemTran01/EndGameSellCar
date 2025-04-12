@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const value = select.value;
 
     if (value === "default") {
-      // Reload page or reset order if needed
       window.location.reload();
       return;
     }
@@ -19,10 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return value === "asc" ? priceA - priceB : priceB - priceA;
     });
 
-    // Xóa các card hiện tại
     productContainer.innerHTML = "";
 
-    // Thêm lại theo thứ tự đã sắp xếp
     sortedCards.forEach((card) => {
       productContainer.appendChild(card);
     });

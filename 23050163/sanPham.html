@@ -100,7 +100,7 @@
         <div class="container-fluid py-5">
             <!--Gioi thieu san pham-->
             <div class="d-flex justify-content-start align-items-center mb-3 ps-5">
-              <label for="sortPrice" class="me-2 fw-bold">Sắp xếp theo giá:</label>
+              <label for="sortPrice" class="me-2 fw-bold"><strong><i class="fa-solid fa-sort" style="color: #277cea;"></i></strong> Sắp xếp theo giá:</label>
               <select class="form-select w-auto" id="sortPrice" onchange="sortProducts()">
                 <option value="default">Mặc định</option>
                 <option value="asc">Tăng dần</option>
@@ -567,6 +567,21 @@
       <a href="tel:0914892412" class="call-Icon" data-bs-toggle="tooltip" data-bs-placement="top" title="Liên hệ với chúng tôi qua điện thoại">
         <i class="fa-solid fa-phone" style="color: white;"></i>
       </a>
+    </div>
+
+    <!-- Modal thong bao -->
+    <div class="modal fade" id="thongBaoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="thongBaoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="thongBaoModalLabel">🤖 THÔNG BÁO</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+          </div>
+          <div class="modal-body" id="noiDungModal">
+            
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="../23050163/javascripts/file.js"></script>

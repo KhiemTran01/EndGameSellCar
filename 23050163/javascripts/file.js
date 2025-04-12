@@ -5,23 +5,28 @@ document
 
     const form = event.target;
 
-    let nameField = document.getElementById("name");
-    let phoneNumberField = document.getElementById("phoneNumber");
-
-    let name = document.getElementById("name").value;
-    let phoneNumber = document.getElementById("phoneNumber").value;
+    let name = document.getElementById("name").value.trim();
+    let phoneNumber = document.getElementById("phoneNumber").value.trim();
     const phoneRegex = /^(0[3|5|7|8|9])+([0-9]{8})$/;
 
-    if (name.trim() == "" && phoneNumber.trim() == "") {
-      alert("Vui lòng nhập thông tin");
+    let modalContent = document.getElementById("noiDungModal");
+    let modal = new bootstrap.Modal(document.getElementById("thongBaoModal"));
+
+    if (name === "" && phoneNumber === "") {
+      modalContent.innerHTML = `<div class="alert alert-warning mb-0">Vui lòng nhập thông tin.</div>`;
+      modal.show();
     } else {
       if (phoneRegex.test(phoneNumber)) {
-        alert(
-          `Chúc mừng ${name} đã đăng ký nhận thông tin thành công.\nThông tin sẽ được gửi đến số điện thoại ${phoneNumber} trong thời gian sớm nhất!`
-        );
+        modalContent.innerHTML = `
+        <div class="alert alert-success mb-0">
+          Chúc mừng <strong>${name}</strong> đã đăng ký nhận thông tin thành công.<br>
+          Thông tin sẽ được gửi đến số <strong>${phoneNumber}</strong> trong thời gian sớm nhất!
+        </div>`;
+        modal.show();
         form.reset();
       } else {
-        alert("Số điện thoại chưa hợp lệ!");
+        modalContent.innerHTML = `<div class="alert alert-danger mb-0">Số điện thoại chưa hợp lệ!</div>`;
+        modal.show();
       }
     }
   });
@@ -42,6 +47,9 @@ document
 
     const phoneRegex = /^(0[3|5|7|8|9])+([0-9]{8})$/;
 
+    let modal = new bootstrap.Modal(document.getElementById("thongBaoModal"));
+    let modalContent = document.getElementById("noiDungModal");
+
     if (
       name === "" ||
       phoneNumber === "" ||
@@ -50,19 +58,20 @@ document
       thoiDiemMua === "" ||
       traGop === ""
     ) {
-      alert("Vui lòng nhập đầy đủ thông tin.");
+      modalContent.innerHTML = `<div class="alert alert-warning">Vui lòng nhập đầy đủ thông tin.</div>`;
+      modal.show();
       return;
     }
 
     if (!phoneRegex.test(phoneNumber)) {
-      alert("Số điện thoại chưa hợp lệ!");
+      modalContent.innerHTML = `<div class="alert alert-danger">Số điện thoại chưa hợp lệ!</div>`;
+      modal.show();
       return;
     }
 
     let selectedOffers = [];
     for (let i = 1; i <= 4; i++) {
       let checkbox = document.getElementById(`check${i}`);
-      let label = document.querySelector(`label[for='validationFormCheck1']`);
       if (checkbox && checkbox.checked) {
         let labelText =
           checkbox.nextElementSibling?.innerText ||
@@ -71,17 +80,27 @@ document
       }
     }
 
-    let message = `Bảng giá sẽ được gửi đến ${name} thông qua số điện thoại!
-    Số điện thoại: ${phoneNumber}
-    Khu vực: ${tinh}
-    Dòng xe quan tâm: ${loaiXe}
-    Dự kiến mua xe: ${thoiDiemMua}
-    Hình thức thanh toán: ${traGop}`;
+    let message = `
+      <div class="alert alert-success">
+        <p>Bảng giá sẽ được gửi đến <strong>${name}</strong> thông qua số điện thoại!</p>
+        <ul class="list-unstyled mb-2">
+          <li><strong>SĐT:</strong> ${phoneNumber}</li>
+          <li><strong>Khu vực:</strong> ${tinh}</li>
+          <li><strong>Dòng xe:</strong> ${loaiXe}</li>
+          <li><strong>Thời điểm mua:</strong> ${thoiDiemMua}</li>
+          <li><strong>Hình thức thanh toán:</strong> ${traGop}</li>
+        </ul>
+        ${
+          selectedOffers.length > 0
+            ? `<p><strong>Thông tin đã chọn:</strong><br>${selectedOffers.join(
+                "<br>"
+              )}</p>`
+            : ""
+        }
+      </div>
+    `;
 
-    if (selectedOffers.length > 0) {
-      message += `\nThông tin đã chọn:\n${selectedOffers.join("\n")}`;
-    }
-
-    alert(message);
+    modalContent.innerHTML = message;
+    modal.show();
     form.reset();
   });
