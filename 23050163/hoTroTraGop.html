@@ -135,7 +135,7 @@
                         <p style="color: #5c5c5c;">Tư vấn hỗ trợ khách hàng mua xe Vinfast trả góp với lãi suất thấp nhất trên toàn quốc.</p>
                         
                         <!--form-->
-                        <form class="needs-validation mt-3 content-Sale">
+                        <form class="needs-validation mt-3 content-Sale" id="hoTroTraGop">
                             <div class="row g-3">
                               <div class="col-md-6 col-12 col-sm-6">
                                 <div class="input-group has-validation rounded-pill overflow-hidden" style="border: 2px solid rgb(228, 228, 228);">
@@ -147,7 +147,7 @@
                                     placeholder="Họ tên *"
                                     type="text"
                                     class="form-control border-0"
-                                    id="validationCustomUsername"
+                                    id="name3"
                                     aria-describedby="inputGroupPrepend"
                                     required
                                   />
@@ -165,7 +165,7 @@
                                     placeholder="Số điện thoại *"
                                     type="text"
                                     class="form-control border-0"
-                                    id="validationCustomUsername"
+                                    id="phoneNumber3"
                                     aria-describedby="inputGroupPrepend"
                                     required
                                   />
@@ -179,7 +179,7 @@
                                 <div class="input-group has-validation rounded-pill overflow-hidden" style="border: 2px solid rgb(228, 228, 228);">
                                   <span class="input-group-text border-0 bg-white" id="inputGroupPrepend"
                                     ><i class="fa-solid fa-building" style="color: #484848;"></i></span>
-                                  <select class="form-select border-0" style="color: #5c5c5c;" id="validationCustom04" required>
+                                  <select class="form-select border-0" style="color: #5c5c5c;" id="tinh" required>
                                     <option selected disabled value="">Tỉnh/ Thành phố</option>
                                     <option>Tây Ninh</option>
                                     <option>Bình Phước</option>
@@ -197,7 +197,7 @@
                                 <div class="input-group has-validation rounded-pill overflow-hidden" style="border: 2px solid rgb(228, 228, 228);">
                                   <span class="input-group-text border-0 bg-white" id="inputGroupPrepend"
                                     ><i class="fa-solid fa-car" style="color: #484848;"></i></span>
-                                  <select class="form-select border-0" style="color: #5c5c5c;" id="validationCustom04" required>
+                                  <select class="form-select border-0" style="color: #5c5c5c;" id="loaiXe" required>
                                     <option selected disabled value="">Dòng xe quan tâm</option>
                                     <option>Minio Green</option>
                                     <option>Herio Green</option>
@@ -220,7 +220,7 @@
                                 <div class="input-group has-validation rounded-pill overflow-hidden" style="border: 2px solid rgb(228, 228, 228);">
                                   <span class="input-group-text border-0 bg-white" id="inputGroupPrepend"
                                     ><i class="fa-solid fa-calendar-days" style="color: #484848;"></i></span>
-                                  <select class="form-select border-0" style="color: #5c5c5c;" id="validationCustom04" required>
+                                  <select class="form-select border-0" style="color: #5c5c5c;" id="thoiDiemMua" required>
                                     <option selected disabled value="">Thời điểm mua xe dự tính</option>
                                     <option>Trong tháng này</option>
                                     <option>Trong tháng sau</option>
@@ -236,7 +236,7 @@
                                 <div class="input-group has-validation rounded-pill overflow-hidden" style="border: 2px solid rgb(228, 228, 228);">
                                   <span class="input-group-text border-0 bg-white" id="inputGroupPrepend"
                                     ><i class="fa-solid fa-circle-dollar-to-slot" style="color: #484848;"></i></span>
-                                  <select class="form-select border-0" style="color: #5c5c5c;" id="validationCustom04" required>
+                                  <select class="form-select border-0" style="color: #5c5c5c;" id="traGop" required>
                                     <option selected disabled value="">Hình thức trả góp</option>
                                     <option>Tư vấn trả góp 25%</option>
                                     <option>Tư vấn trả góp 50%</option>
@@ -250,20 +250,24 @@
 
                               <div class="col-md-6 col-12 col-sm-6">
                                 <div class="form-check mb-3">
-                                  <input type="checkbox" class="form-check-input rounded-circle" id="validationFormCheck1">
+                                  <input type="checkbox" class="form-check-input rounded-circle" id="check1">
                                   <label class="form-check-label content-Sale" for="validationFormCheck1">Công nhân viên chức, có bảng lương, bảo hiểm...</label>
                                   <div class="invalid-feedback">Example invalid feedback text</div>
                                 </div>
 
                                 <div class="form-check mb-3">
-                                    <input type="checkbox" class="form-check-input rounded-circle" id="validationFormCheck1">
+                                    <input type="checkbox" class="form-check-input rounded-circle" id="check2">
                                     <label class="form-check-label content-Sale" for="validationFormCheck1">Lao động tự do, kinh doanh tự do, khác...</label>
                                     <div class="invalid-feedback">Example invalid feedback text</div>
                                   </div>
-
-                                  <button type="submit" class="btn btn-primary rounded-pill overflow-hidden">Nhận tư vấn <i class="fa-solid fa-cloud-arrow-down" style="color: #ffffff;"></i></button>
                               </div>
               
+                            </div>
+
+                            <div class="row g-3">
+                              <div class="col-md-6 col-12 col-sm-6">
+                                <button type="submit" class="btn btn-primary rounded-pill overflow-hidden">Nhận tư vấn <i class="fa-solid fa-cloud-arrow-down" style="color: #ffffff;"></i></button>
+                              </div>
                             </div>
                           </form>
 
@@ -379,53 +383,52 @@
 
             </div>
 
-            <form class="row d-flex justify-content-center g-3 text-center needs-validation">
+            <form id="dangKyNhanThongTin" class="row d-flex justify-content-center g-3 text-center needs-validation">
 
-            <div class="col-auto">
-                <div class="input-group has-validation rounded-pill overflow-hidden">
-                <span class="input-group-text border-0 bg-white" id="inputGroupPrepend">
-                    <i class="fa-solid fa-user" style="color: #484848;"></i>
-                </span>
-                <input
-                    style="color: #5c5c5c;"
-                    placeholder="Họ tên *"
-                    type="text"
-                    class="form-control border-0"
-                    id="validationCustomUsername"
-                    aria-describedby="inputGroupPrepend"
-                    required
-                />
-                <div class="invalid-feedback">Vui lòng nhập họ và tên.</div>
-                </div>
-            </div>
+              <div class="col-auto">
+                  <div class="input-group has-validation rounded-pill overflow-hidden">
+                  <span class="input-group-text border-0 bg-white" id="inputGroupPrepend">
+                      <i class="fa-solid fa-user" style="color: #484848;"></i>
+                  </span>
+                  <input
+                      style="color: #5c5c5c;"
+                      placeholder="Họ tên *"
+                      type="text"
+                      class="form-control border-0"
+                      id="name"
+                      aria-describedby="inputGroupPrepend"
+                      required
+                  />
+                  <div class="invalid-feedback">Vui lòng nhập họ và tên.</div>
+                  </div>
+              </div>
 
-            <div class="col-auto">
-                <div class="input-group has-validation rounded-pill overflow-hidden">
-                <span class="input-group-text border-0 bg-white" id="inputGroupPrepend"
-                    ><i class="fa-solid fa-mobile-screen-button" style="color: #484848;"></i></i
-                ></span>
-                <input
-                    style="color: #5c5c5c;"
-                    placeholder="Số điện thoại *"
-                    type="text"
-                    class="form-control border-0"
-                    id="phoneNumber"
-                    aria-describedby="inputGroupPrepend"
-                    required
-                />
-                <div class="invalid-feedback text-start">
-                    Vui lòng nhập số điện thoại.
-                </div>
-                </div>
-            </div>
+              <div class="col-auto">
+                  <div class="input-group has-validation rounded-pill overflow-hidden">
+                  <span class="input-group-text border-0 bg-white" id="inputGroupPrepend"
+                      ><i class="fa-solid fa-mobile-screen-button" style="color: #484848;"></i></i
+                  ></span>
+                  <input
+                      style="color: #5c5c5c;"
+                      placeholder="Số điện thoại *"
+                      type="text"
+                      class="form-control border-0"
+                      id="phoneNumber"
+                      aria-describedby="inputGroupPrepend"
+                      required
+                  />
+                  <div class="invalid-feedback text-start">
+                      Vui lòng nhập số điện thoại.
+                  </div>
+                  </div>
+              </div>
 
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary rounded-pill overflow-hidden">Đăng ký <i class="fa-solid fa-rocket" style="color: #ffffff;"></i></button>
-            </div>
+              <div class="col-auto">
+                  <button type="submit" class="btn btn-primary rounded-pill overflow-hidden">Đăng ký <i class="fa-solid fa-rocket" style="color: #ffffff;"></i></button>
+              </div>
 
-            <p><small class="text-white" style="font-size: 12px;">Đại lý Vinfast Bình Dương cam kết hỗ trợ khách hàng mua xe Vinfast với giá tốt nhất trên toàn đại lý.</small></p>
-
-            </div>
+              <p><small class="text-white" style="font-size: 12px;">Đại lý Vinfast Bình Dương cam kết hỗ trợ khách hàng mua xe Vinfast với giá tốt nhất trên toàn đại lý.</small></p>
+          </form>
 
         </div>
 
@@ -518,6 +521,7 @@
       </a>
     </div>
 
+    <script src="file.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

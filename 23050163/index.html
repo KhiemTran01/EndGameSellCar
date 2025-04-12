@@ -656,7 +656,7 @@
             </div>
 
             <div class="content-Sale text-center">
-              <a href="#"
+              <a href="khuyenMai.html"
                 ><strong class="touch_blue" style="font-size: 10px;">Xem thêm khuyến mãi</strong></a
               >
             </div>
@@ -678,7 +678,7 @@
               >
             </div>
 
-            <form class="needs-validation mt-3 content-Sale">
+            <form id="bangGiaLanBanh" class="needs-validation mt-3 content-Sale">
               <div class="row g-3">
                 <div class="col-md-6 col-12 col-sm-6">
                   <div class="input-group has-validation rounded-pill overflow-hidden">
@@ -690,7 +690,7 @@
                       placeholder="Họ tên *"
                       type="text"
                       class="form-control border-0"
-                      id="validationCustomUsername"
+                      id="name1"
                       aria-describedby="inputGroupPrepend"
                       required
                     />
@@ -708,7 +708,7 @@
                       placeholder="Số điện thoại *"
                       type="text"
                       class="form-control border-0"
-                      id="validationCustomUsername"
+                      id="phoneNumber1"
                       aria-describedby="inputGroupPrepend"
                       required
                     />
@@ -722,7 +722,7 @@
                   <div class="input-group has-validation rounded-pill overflow-hidden">
                     <span class="input-group-text border-0 bg-white" id="inputGroupPrepend"
                       ><i class="fa-solid fa-building" style="color: #484848;"></i></span>
-                    <select class="form-select border-0" style="color: #5c5c5c;" id="validationCustom04" required>
+                    <select class="form-select border-0" style="color: #5c5c5c;" id="tinh" required>
                       <option selected disabled value="">Tỉnh/ Thành phố</option>
                       <option>Tây Ninh</option>
                       <option>Bình Phước</option>
@@ -740,7 +740,7 @@
                   <div class="input-group has-validation rounded-pill overflow-hidden">
                     <span class="input-group-text border-0 bg-white" id="inputGroupPrepend"
                       ><i class="fa-solid fa-car" style="color: #484848;"></i></span>
-                    <select class="form-select border-0" style="color: #5c5c5c;" id="validationCustom04" required>
+                    <select class="form-select border-0" style="color: #5c5c5c;" id="loaiXe" required>
                       <option selected disabled value="">Dòng xe quan tâm</option>
                       <option>Minio Green</option>
                       <option>Herio Green</option>
@@ -763,7 +763,7 @@
                   <div class="input-group has-validation rounded-pill overflow-hidden">
                     <span class="input-group-text border-0 bg-white" id="inputGroupPrepend"
                       ><i class="fa-solid fa-calendar-days" style="color: #484848;"></i></span>
-                    <select class="form-select border-0" style="color: #5c5c5c;" id="validationCustom04" required>
+                    <select class="form-select border-0" style="color: #5c5c5c;" id="thoiDiemMua" required>
                       <option selected disabled value="">Thời điểm mua xe (dự tính)</option>
                       <option>Trong tháng này</option>
                       <option>Trong tháng sau</option>
@@ -779,7 +779,7 @@
                   <div class="input-group has-validation rounded-pill overflow-hidden">
                     <span class="input-group-text border-0 bg-white" id="inputGroupPrepend"
                       ><i class="fa-solid fa-money-check-dollar" style="color: #484848;"></i></span>
-                    <select class="form-select border-0" style="color: #5c5c5c;" id="validationCustom04" required>
+                    <select class="form-select border-0" style="color: #5c5c5c;" id="traGop" required>
                       <option selected disabled value="">Trả thẳng/ trả góp</option>
                       <option>Trả góp 30%</option>
                       <option>Trả góp 50%</option>
@@ -794,7 +794,7 @@
 
                 <div class="col-md-6 col-12 col-sm-6">
                   <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input rounded-circle" id="validationFormCheck1">
+                    <input type="checkbox" class="form-check-input rounded-circle" id="check1">
                     <label class="form-check-label content-Sale" for="validationFormCheck1">Khuyến mãi, giảm giá tiền mặt mới nhất</label>
                     <div class="invalid-feedback">Example invalid feedback text</div>
                   </div>
@@ -802,7 +802,7 @@
 
                 <div class="col-md-6 col-12 col-sm-6">
                   <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input rounded-circle" id="validationFormCheck1">
+                    <input type="checkbox" class="form-check-input rounded-circle" id="check2">
                     <label class="form-check-label content-Sale" for="validationFormCheck1">Hỗ trợ thủ tục trả góp, lãi suất thấp</label>
                     <div class="invalid-feedback">Example invalid feedback text</div>
                   </div>
@@ -810,7 +810,7 @@
 
                 <div class="col-md-6 col-12 col-sm-6">
                   <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input rounded-circle" id="validationFormCheck1">
+                    <input type="checkbox" class="form-check-input rounded-circle" id="check3">
                     <label class="form-check-label content-Sale" for="validationFormCheck1">Giá lăn bánh sau khi áp dụng khuyến mãi</label>
                     <div class="invalid-feedback">Example invalid feedback text</div>
                   </div>
@@ -818,7 +818,7 @@
 
                 <div class="col-md-6 col-12 col-sm-6">
                   <div class="form-check mb-3">
-                    <input type="checkbox" class="form-check-input rounded-circle" id="validationFormCheck1">
+                    <input type="checkbox" class="form-check-input rounded-circle" id="check4">
                     <label class="form-check-label content-Sale" for="validationFormCheck1">Đăng ký xem xe & Lái thử tại nhà</label>
                     <div class="invalid-feedback">Example invalid feedback text</div>
                   </div>
@@ -932,7 +932,7 @@
 
         </div>
 
-        <form class="row d-flex justify-content-center g-3 text-center needs-validation">
+        <form id="dangKyNhanThongTin" class="row d-flex justify-content-center g-3 text-center needs-validation">
 
           <div class="col-auto">
             <div class="input-group has-validation rounded-pill overflow-hidden">
@@ -944,7 +944,7 @@
                 placeholder="Họ tên *"
                 type="text"
                 class="form-control border-0"
-                id="validationCustomUsername"
+                id="name"
                 aria-describedby="inputGroupPrepend"
                 required
               />
@@ -978,7 +978,7 @@
 
           <p><small class="text-white" style="font-size: 12px;">Đại lý Vinfast Bình Dương cam kết hỗ trợ khách hàng mua xe Vinfast với giá tốt nhất trên toàn đại lý.</small></p>
 
-        </div>
+        </form>
 
       </div>
 
@@ -1071,6 +1071,7 @@
       </a>
     </div>
 
+    <script src="file.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
