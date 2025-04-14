@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VinFast VF5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container mb-4"> 
+        <img src="image_vf5/Vinfast-VF5-Binh-Duong-1024x576.jpg" class="img-fluid w-100" alt="Banner Khuyến mãi VinFast">
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="h4 mb-3 fw-bold">VINFAST VF5</h1>
+                <p class="text-muted small">Tin vui cho những ai đang chờ mua xe VinFast! VinFast chính thức chỉ bán xe kèm pin. Giá xe VinFast giảm mạnh, giá bán tốt nhất từ trước đến nay!</p>
+
+                <table class="table table-bordered mb-4">
+                    <thead>
+                        <tr>
+                            <th>Phiên bản</th>
+                            <th class="text-end">Giá bán VNĐ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>VF5 Plus (kèm Pin)</td>
+                            <td class="text-end fw-bold text-danger">529.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>Bộ sạc với công suất AC 7,4 kW</td>
+                            <td class="text-end">11.000.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <section class="mb-4 p-3 border rounded bg-light">
+                    <h2 class="h5 fw-bold mb-3"><i class="bi bi-tags-fill text-primary me-2"></i>KHUYẾN MÃI VINFAST VF5 04/2025</h2>
+                    <p class="small">Khuyến mãi Vinfast VF5 Plus giảm trực tiếp giá bán 11 triệu đồng. Miễn phí sạc Pin đến 30/06/2027. Vinfast VF5 giảm 100% phí trước bạ tiết kiệm đến 53 triệu. Xe có sẵn, đủ phiên bản và màu sắc. Mua xe VF5 trả góp trả trước 135.000.000đ lãi suất trả góp hấp dẫn, chỉ từ 0.6%. Chi tiết liên hệ..!</p>
+                    <ul class="list-unstyled small">
+                        <li class="mb-1">
+                            <i class="bi bi-telephone-fill text-success me-1"></i> Chi tiết khuyến mãi: <a href="tel:0399999999" 
+                            class="fw-bold text-decoration-none text-danger">0399.999.999</a> 
+                            
+                            <button class="btn btn-sm btn-outline-primary py-0 ms-1">Tìm gọi</button>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt-fill text-info me-1"></i> Đại lý Vinfast Bình Dương: Tp.Thủ Dầu Một
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="mb-4 p-3 border rounded">
+                    <h2 class="h5 fw-bold mb-3"><i class="bi bi-calculator-fill text-primary me-2"></i>GIÁ LĂN BÁNH VINFAST VF5 04/2025</h2>
+                    <p class="small text-muted">Nhận bảng giá lăn bánh chi tiết sau khi đã áp dụng chương trình khuyến mãi Vinfast Nam Thái Bình Dương 04/2025:</p>
+                    <form id="price-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="customerName" class="form-label small">Khách hàng <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-sm" id="customerName" placeholder="Họ và tên" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="customerPhone" class="form-label small">Liên hệ <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control form-control-sm" id="customerPhone" placeholder="Số điện thoại" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="customerCity" class="form-label small">Tỉnh/ Thành phố</label>
+                                <select class="form-select form-select-sm" id="customerCity">
+                                    <option value="BD" selected>T. Bình Dương</option>
+                                    <option value="BP">T. Bình Phước</option>
+                                    <option value="HCM">TP. Hồ Chí Minh</option>
+                                    <option value="Khac">Tỉnh thành khác</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="purchaseTime" class="form-label small">Thời điểm mua xe dự kiến</label>
+                                <select class="form-select form-select-sm" id="purchaseTime"> <option value="" selected disabled>-- Chọn thời điểm --</option>
+                                     <option value="thangnay">Trong tháng này</option>
+                                     <option value="thangsau">Trong tháng sau</option>
+                                     <option value="6thangtoi">Trong 6 tháng tới</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-sm">Nhận bảng giá <i class="bi bi-arrow-right-short"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="mb-4">
+                    <h2 class="h5 fw-bold mb-3">Tổng quan VinFast VF 5 Plus</h2>
+                    <p class="small">VF 5 là em út trong gia đình xe điện của VinFast, gồm những VF e34, 
+                        VF 8 và VF 9. Xe có 16 màu lựa chọn, trong đó có 10 mẫu sơn ngoại thất hai tông màu.</p>
+                    <p class="small">Tại Việt Nam, VinFast VF 5 Plus giá 458 triệu đồng (không bao gồm pin)
+                         và 538 triệu đồng (đã bao gồm pin, tức pin có giá 80 triệu). 
+                         Giá thuê pin cố định là 1,6 triệu đồng/tháng (không bao gồm chi phí sạc). 
+                         Khách hàng mua xe được cố định giá thuê pin suốt vòng đời sản phẩm theo giá tại 
+                         thời điểm nhận xe. Hãng bảo hành cho VF 5 Plus 7 năm 
+                         (hoặc 140.000 km tuỳ điều kiện nào đến trước).</p>
+                         <section class="mt-5 mb-4">
+                            <div class="row">
+                      
+                              <div class="col-md-4 col-sm-6 mb-4"> 
+                                  <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                   data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-trang-1-300x200.jpg">
+                                      <img src="image_vf5/Vinfast-VF5-Plus-trang-1-300x200.jpg"
+                                       class="img-fluid img-thumbnail gallery-image" alt="VF8">
+                                  </a>
+                              </div>
+                              <div class="col-md-4 col-sm-6 mb-4">
+                                   <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                   data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-trang-2-300x200.jpg">
+                                      <img src="image_vf5/Vinfast-VF5-Plus-trang-2-300x200.jpg"
+                                       class="img-fluid img-thumbnail gallery-image" alt="VF8">
+                                  </a>
+                              </div>
+                              <div class="col-md-4 col-sm-6 mb-4">
+                                  <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                  data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-trang-3-300x200.jpg">
+                                      <img src="image_vf5/Vinfast-VF5-Plus-trang-3-300x200.jpg" class="img-fluid img-thumbnail gallery-image" alt="VF8">
+                                  </a>
+                              </div>
+                      
+                              <div class="col-md-4 col-sm-6 mb-4">
+                                  <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                  data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-trang-4-300x200.jpg">
+                                      <img src="image_vf5/Vinfast-VF5-Plus-trang-4-300x200.jpg" 
+                                      class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                  </a>
+                              </div>
+                               <div class="col-md-4 col-sm-6 mb-4">
+                                   <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                   data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-trang-5-300x200.jpg">
+                                      <img src="image_vf5/Vinfast-VF5-Plus-trang-5-300x200.jpg" 
+                                      class="img-fluid img-thumbnail gallery-image" alt="VF55">
+                                  </a>
+                              </div>
+                              <div class="col-md-4 col-sm-6 mb-4">
+                                  <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                  data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-trang-6-300x200.jpg">
+                                      <img src="image_vf5/Vinfast-VF5-Plus-trang-6-300x200.jpg" 
+                                      class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                  </a>
+                              </div>
+                       
+                          </div>
+                      </section>
+                      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="imageModalLabel">Xem ảnh</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                              <img src="" id="modalImage" class="img-fluid" alt="Ảnh phóng to">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    <h3 class="h6 fw-bold mt-4">Thiết kế ngoại thất Vinfast VF5</h3>
+                    <h4 class="small fw-bold mt-3">Kích thước, trọng lượng</h4>
+                    <p class="small">Fadil chạy xăng đã khai tử, còn VF 5 Plus định vị là một chiếc xe gầm
+                         cao (crossover) cỡ A, kích thước lớn hơn Fadil. Mẫu xe điện của VinFast có
+                          chiều dài cơ sở 2.513 mm, kích thước dài, rộng, cao lần lượt là
+                           3.965 x 1.720 x 1.580 mm. Nếu so với các mẫu xe cùng phân khúc crossover cỡ A,
+                            kích thước tổng thể của VF 5 gần tương đương Raize nhưng lại nhỏ hơn so với Sonet.</p>
+                    <p class="small">Tuy vậy, chiều dài cơ sở của VF 5 là 2.513 mm lại dài hơn 13 mm so với Sonet và ngắn hơn 12 mm so với Raize. Khoảng sáng gầm của VF5 (182 mm) cũng thấp hơn hai đối thủ Sonet (205 mm) và Raize (200 mm).</p>
+                    <p class="small">Việc nhỏ hơn về kích thước tổng thể với một mẫu xe điện so với xe xăng cùng phân khúc không phải là vấn đề quá lớn, bởi ưu thế ít chi tiết, nội thất rộng rãi có thể giúp xe điện không cần quá to lớn nhưng vẫn đảm bảo công năng.</p>
+                    <section class="mt-5 mb-4">
+                        <div class="row">
+                  
+                          <div class="col-md-4 col-sm-6 mb-4"> 
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal"
+                               data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-mau-do-1-300x200.jpg">
+                                  <img src="image_vf5/Vinfast-VF5-Plus-mau-do-1-300x200.jpg"
+                                   class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                              </a>
+                          </div>
+                          <div class="col-md-4 col-sm-6 mb-4">
+                               <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                               data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-mau-do-2.jpg">
+                                  <img src="image_vf5/Vinfast-VF5-Plus-mau-do-2.jpg"
+                                   class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                              </a>
+                          </div>
+                          <div class="col-md-4 col-sm-6 mb-4">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                              data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-mau-do-3-300x200.jpg">
+                                  <img src="image_vf5/Vinfast-VF5-Plus-mau-do-3-300x200.jpg" class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                              </a>
+                          </div>
+                  
+                       
+                          <div class="col-md-4 col-sm-6 mb-4">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                              data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-mau-do-4-300x200.jpg">
+                                  <img src="image_vf5/Vinfast-VF5-Plus-mau-do-4-300x200.jpg" class="img-fluid img-thumbnail gallery-image" alt="Vf5">
+                              </a>
+                          </div>
+                           <div class="col-md-4 col-sm-6 mb-4">
+                               <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                               data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-mau-do-5-300x200.jpg">
+                                  <img src="image_vf5/Vinfast-VF5-Plus-mau-do-5-300x200.jpg" class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                              </a>
+                          </div>
+                          <div class="col-md-4 col-sm-6 mb-4">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                              data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-mau-do-6-300x200.jpg">
+                                  <img src="image_vf5/Vinfast-VF5-Plus-mau-do-6-300x200.jpg" 
+                                  class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                              </a>
+                          </div>
+                          
+                  
+                      </div>
+                  </section>
+                  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="imageModalLabel">Xem ảnh</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <img src="" id="modalImage" class="img-fluid" alt="Ảnh phóng to">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <h4 class="small fw-bold mt-3">Khung gầm, hệ thống treo</h4>
+                    <p class="small">Mẫu xe sử dụng khung gầm liền khối kết hợp với hệ thống treo 
+                        trước kiểu MacPherson và treo sau kiểu Dầm xoắn. Đây là hệ thống treo phù 
+                        hợp nhất với một mẫu xe cỡ nhỏ, sử dụng chủ yếu trong đô thị; mang đến sự êm 
+                        ái tối đa cho các hành khách trên xe.</p>
+                    <p class="small">Hệ thống treo trên VF 5 sẽ ghi điểm hơn so với đối thủ khi mà trang bị
+                         phanh đĩa trước và sau. Trong khi đó các mẫu Raize hay Sonet vẫn chỉ sử dụng 
+                         phanh tang trống phía sau.</p>
+
+                    
+
+                    <h4 class="small fw-bold mt-3">Đầu xe</h4>
+                    <p class="small">Phần đầu xe của VF 5 được thiết kế theo phong cách hiện đại và có phần tối giản theo phong cách đặc trưng của VinFast. Nắp ca-pô dập nổi cơ bắp, mặt Ca-lăng kín và liền mạch theo đặc trưng của xe điện do không cần làm mát động cơ. Logo VinFast được đặt chính giữa với 2 dải crom trang trí theo hình cánh chim vô cùng quen thuộc với khách hàng.</p>
+                    <p class="small">Cụm đèn pha được đặt ở phía dưới và thiết kế khá gọn gàng,
+                         với đầy đủ đèn pha, đèn xi-nhan và đèn ban ngày.
+                          Điểm trừ của VF 5 có lẽ đến từ việc xe không có đèn sương mù và
+                           chỉ trang bị đèn pha Bi-Halogen chứ không có đèn LED giống Sonet,
+                            Raize. Hệ thống Camera trước và cảm biến đỗ xe cũng không được
+                             trang bị ở phần đầu của VF 5.</p>
+
+                             <section class="mt-5 mb-4">
+                                <div class="row">
+                          
+                                  <div class="col-md-4 col-sm-6 mb-4"> 
+                                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                       data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-1-150x150.jpg">
+                                          <img src="image_vf5/Vinfast-VF5-Plus-1-150x150.jpg"
+                                           class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                      </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-6 mb-4">
+                                       <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                       data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-2-150x150.jpg">
+                                          <img src="image_vf5/Vinfast-VF5-Plus-2-150x150.jpg"
+                                           class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                      </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-6 mb-4">
+                                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                      data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-3-150x150.jpg">
+                                          <img src="image_vf5/Vinfast-VF5-Plus-3-150x150.jpg" class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                      </a>
+                                  </div>
+                          
+                                  <div class="col-md-4 col-sm-6 mb-4">
+                                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                      data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-4-150x150.jpg">
+                                          <img src="image_vf5/Vinfast-VF5-Plus-4-150x150.jpg" class="img-fluid img-thumbnail gallery-image" alt="Vf5">
+                                      </a>
+                                  </div>
+                                   <div class="col-md-4 col-sm-6 mb-4">
+                                       <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                       data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-5-150x150.jpg">
+                                          <img src="image_vf5/Vinfast-VF5-Plus-5-150x150.jpg" class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                      </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-6 mb-4">
+                                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                      data-bs-imgsrc="image_vf5/Vinfast-VF5-Plus-6-150x150.jpg">
+                                          <img src="image_vf5/Vinfast-VF5-Plus-6-150x150.jpg" 
+                                          class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                      </a>
+                                  </div>
+                 
+                          
+                              </div>
+                          </section>
+                          <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="imageModalLabel">Xem ảnh</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <img src="" id="modalImage" class="img-fluid" alt="Ảnh phóng to">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                    <h4 class="small fw-bold mt-3">Thân xe</h4>
+                    <p class="small">Hai bên thân xe của VF 5 gây ấn tượng với những chi tiết dập nổi kết hợp với những đường bo tròn. Cột C thiết kế phong cách thể thao với đường viền đen chạy ra sau đuôi, cho xe cảm giác dài hơn, trong khi hốc bánh xe tạo những đường gân cơ bắp. Cổng sạc đặt bố trí bên hông phải của xe, giúp tăng thêm phần thuận tiện trong quá trình sạc pin cho xe.</p>
+
+                    <h4 class="small fw-bold mt-3">Tay nắm cửa và gương chiếu hậu</h4>
+                    <p class="small">Tay nắm cửa được sơn cùng màu với thân xe. Hệ thống gương chiếu hậu sơn 2 tông màu với các tính năng Chỉnh điện, Tích hợp đèn báo rẽ và Cảnh báo điểm mù.</p>
+
+                    <h4 class="small fw-bold mt-3">Đuôi xe</h4>
+                    <p class="small">Thiết kế phần đuôi xe VF 5 khá tương đồng với phần đầu, đề cao sự gọn gàng và đơn giản. Cụm đèn hậu được đưa xuống dưới và trang trí với đường viền mỏng chạy toàn bộ chiều ngang xe. Cản sau đơn giản và cánh gió cùng tông màu với phần nóc xe.</p>
+
+                    <h4 class="small fw-bold mt-3">Cốp xe</h4>
+                    <p class="small">Cốp xe mở bằng cơ và có phần hơi nặng, không gian chứa đồ ở mức đủ dùng cho những chuyến đi chơi ngắn ngày. Phần đuôi xe cũng được trang bị đầy đủ hệ thống Cảm biến đỗ xe phía sau lẫn Camera lùi.</p>
+
+                    <h4 class="small fw-bold mt-3">Mâm, lốp</h4>
+                    <p class="small">VF 5 sử dụng bộ vành hợp kim 17 inch thiết kế đa chấu đẹp mắt, kết hợp với bộ lốp có kích thước 205/55R17.</p>
+
+                    <h3 class="h6 fw-bold mt-4">Thiết kế nội thất Vinfast VF5</h3>
+                    <h4 class="small fw-bold mt-3">Khoang lái</h4>
+                    <p class="small">Khoang lái VF 5 được thiết kế rất tối giản với hai màn hình gắn trên
+                         bảng táp-lô; hạn chế tối đa các nút bấm vật lý thường thấy.
+                          Vô lăng 3 chấu được thiết kế dạng D-Cut thể thao có thể chỉnh cơ 2 hướng.
+                           Trên vô lăng cũng được bố trí đầy đủ hệ thống nút bấm điều chỉnh hệ thống Menu,
+                            Âm lượng, Đàm thoại rảnh tay và Cruise Control.</p>
+
+                            <section class="mt-5 mb-4">
+                                <div class="row">
+                          
+                                  <div class="col-md-4 col-sm-6 mb-4"> 
+                                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                       data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-1-300x200.jpg">
+                                          <img src="image_vf5/Noi-that-Vinfast-VF5-1-300x200.jpg"
+                                           class="img-fluid img-thumbnail gallery-image" alt="Vf5">
+                                      </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-6 mb-4">
+                                       <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                       data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-2-300x200.jpg">
+                                          <img src="image_vf5/Noi-that-Vinfast-VF5-2-300x200.jpg"
+                                           class="img-fluid img-thumbnail gallery-image" alt="Vf5">
+                                      </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-6 mb-4">
+                                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                      data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-3-300x200.jpg">
+                                          <img src="image_vf5/Noi-that-Vinfast-VF5-3-300x200.jpg" 
+                                          class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                      </a>
+                                  </div>
+                          
+                             
+                                  <div class="col-md-4 col-sm-6 mb-4">
+                                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                      data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-4-300x200.jpg">
+                                          <img src="image_vf5/Noi-that-Vinfast-VF5-4-300x200.jpg" 
+                                          class="img-fluid img-thumbnail gallery-image" alt="Vf5">
+                                      </a>
+                                  </div>
+                                   <div class="col-md-4 col-sm-6 mb-4">
+                                       <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                       data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-5-300x200.jpg">
+                                          <img src="image_vf5/Noi-that-Vinfast-VF5-5-300x200.jpg" 
+                                          class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                      </a>
+                                  </div>
+                                  <div class="col-md-4 col-sm-6 mb-4">
+                                      <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                      data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-6.jpg">
+                                          <img src="image_vf5/Noi-that-Vinfast-VF5-6.jpg" 
+                                          class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                      </a>
+                                  </div>
+                                   
+                          
+                              </div>
+                          </section>
+                          <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="imageModalLabel">Xem ảnh</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <img src="" id="modalImage" class="img-fluid" alt="Ảnh phóng to">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    <p class="small">Phía sau vô lăng một màn hình LCD có kích thước 7 inch giúp hiển thị tốc
+                         độ và các thông tin hỗ trợ lái. Chính giữa là màn hình cảm ứng 8 inch cho hệ thống
+                          thông tin giải trí, hỗ trợ điều khiển bằng giọng nói kết hợp với hệ thống âm
+                           thanh 4 loa. Tuy nhiên màn hình giải trí lại có phần rìa đen thừa ra khá lớn 
+                           so với khung màn hình và không hỗ trợ Apple CarPlay, Android Auto.</p>
+
+                    
+
+                    <h4 class="small fw-bold mt-3">Vô lăng & Màn hình điều khiển</h4>
+                     <p class="small">VinFast trang bị cho VF 5 hệ thống điều hòa tự động 1 vùng, có tính năng lọc bụi mịn PM2.5 và khả năng điều chỉnh bằng giọng nói thông qua trợ lý ảo. Các cửa gió cũng được bố trí khá đẹp mắt và gọn gàng theo phương ngang.</p>
+
+                    <h4 class="small fw-bold mt-3">Cần số</h4>
+                    <p class="small">Phía dưới là núm xoay điều khiển hộp số. Tuy nhiên, 
+                        VF 5 có một điểm khác biệt là không số P như các xe số tự động thông thường. 
+                        Do đó, khi cần đỗ xe thì tài xế chỉ cần về N và kéo phanh tay là được.</p>
+                    <p class="small">Do yên ngựa ở giữa xe được bố trí khá tối giản,
+                         do đó sẽ thiếu đi một số trang bị như khay để cốc, cổng sạc điện thoại, 
+                         bệ tỳ tay phía trước giống như hai đối thủ Raize và Sonet.</p>
+
+                         <section class="mt-5 mb-4">
+                            <div class="row">
+                      
+                              <div class="col-md-4 col-sm-6 mb-4"> 
+                                  <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                   data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-Plus-1-300x200.jpg">
+                                      <img src="image_vf5/Noi-that-Vinfast-VF5-Plus-1-300x200.jpg"
+                                       class="img-fluid img-thumbnail gallery-image" alt="Vf5">
+                                  </a>
+                              </div>
+                              <div class="col-md-4 col-sm-6 mb-4">
+                                   <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                   data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-Plus-2-300x200.jpg">
+                                      <img src="image_vf5/Noi-that-Vinfast-VF5-Plus-2-300x200.jpg"
+                                       class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                  </a>
+                              </div>
+                              <div class="col-md-4 col-sm-6 mb-4">
+                                  <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                  data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-Plus-3-300x200.jpg">
+                                      <img src="image_vf5/Noi-that-Vinfast-VF5-Plus-3-300x200.jpg" 
+                                      class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                  </a>
+                              </div>
+                      
+                   
+                              <div class="col-md-4 col-sm-6 mb-4">
+                                  <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                  data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-Plus-4-300x200.jpg">
+                                      <img src="image_vf5/Noi-that-Vinfast-VF5-Plus-4-300x200.jpg"
+                                       class="img-fluid img-thumbnail gallery-image" alt="Vf5">
+                                  </a>
+                              </div>
+                               <div class="col-md-4 col-sm-6 mb-4">
+                                   <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                   data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-Plus-5-300x200.jpg">
+                                      <img src="image_vf5/Noi-that-Vinfast-VF5-Plus-5-300x200.jpg"
+                                       class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                  </a>
+                              </div>
+                              <div class="col-md-4 col-sm-6 mb-4">
+                                  <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                  data-bs-imgsrc="image_vf5/Noi-that-Vinfast-VF5-Plus-6-300x200.jpg">
+                                      <img src="image_vf5/Noi-that-Vinfast-VF5-Plus-6-300x200.jpg" 
+                                      class="img-fluid img-thumbnail gallery-image" alt="VF5">
+                                  </a>
+                              </div>
+                           
+                      
+                          </div>
+                      </section>
+                      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="imageModalLabel">Xem ảnh</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                              <img src="" id="modalImage" class="img-fluid" alt="Ảnh phóng to">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    <h4 class="small fw-bold mt-3">Hệ thống ghế</h4>
+                    <p class="small">VF 5 sở hữu ghế bọc da, trang trí với chỉ khâu tương phản. Hàng ghế trước được thiết kế khá thoải mái và thể thao với phần thành ghế được nhô cao. Cả ghế lái lẫn ghế hành khách phía trước đều chỉnh cơ.</p>
+                    <p class="small">Không gian hàng ghế sau ở mức khá, sàn phẳng phù hợp với các chuyến đi vừa và ngắn trong đô thị. Lưng ghế có độ ngả tốt, tuy nhiên ghế lại được đặt khá thấp, không đỡ được quá nhiều phần đùi của người ngồi. Hàng ghế thứ hai cũng có thể gập với tỷ lệ 60:40 để tăng thêm không gian để hành lý.</p>
+
+                    <h3 class="h6 fw-bold mt-4">Tính năng thông minh</h3>
+                    <p class="small">VinFast VF 5 tạo điểm nhấn với các tính năng thông minh như: Tự động chẩn đoán lỗi, Trợ lý ảo tiếng Việt, Cập nhật phần mềm từ xa, Cảnh báo xâm nhập xe trái phép, Tiện ích giải trí gia đình và văn phòng, Lưu trữ hồ sơ người lái…</p>
+
+                    <h3 class="h6 fw-bold mt-4">Động cơ và hộp số</h3>
+                    <p class="small">VF 5 Plus lắp một môtơ điện, công suất tương đương 134 mã lực, mô-men xoắn 135 Nm. Bộ pin lithium dung lượng 37,23 kWh, cho quãng đường di chuyển trên 300 km sau mỗi lần sạc đầy, theo công bố từ hãng. Thời gian sạc của pin cũng khá ấn tượng, khi mà chỉ mất khoảng 30 phút là đã có thể được 70% Pin.</p>
+                    <p class="small">So với hai đối thủ còn lại sử dụng động cơ đốt trong, công suất động cơ điện của VF 5 lớn hơn hẳn mức 98 mã lực của Raize và 113 mã lực của Sonet. Cả ba xe đều sử dụng dẫn động cầu trước.</p>
+
+                    <h3 class="h6 fw-bold mt-4">Trang bị an toàn</h3>
+                    <p class="small">Ngoài các công nghệ an toàn cơ bản và 6 túi khí, VF 5 Plus trang bị hệ thống hỗ trợ lái ADAS với kiểm soát hành trình thích ứng, cảnh báo phương tiện cắt ngang phía sau, cảnh báo điểm mù, cảnh báo mở cửa, cảm biến lùi và camera lùi, hỗ trợ phanh khẩn cấp. Hai đối thủ còn lại không có gói này.</p>
+                    <p class="small">Trang bị an toàn tiêu chuẩn với phanh ABS/EBD/BA, cân bằng điện tử, kiểm soát lực kéo, hỗ trợ khởi hành ngang dốc, giảm sát áp suất lốp, móc ghế ISOFIX.</p>
+                </section>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="list-group sidebar-nav">
+                    <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <i class="bi bi-gift-fill fs-3 me-3 text-primary"></i>
+                        <div>
+                            <div class="fw-bold">KHUYẾN MÃI 04/2025</div>
+                            <small class="text-muted">Chương trình khuyến mãi tiền mặt từ 50 đến hơn 100 triệu đồng tùy dòng xe...</small>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <i class="bi bi-tags-fill fs-3 me-3 text-primary"></i>
+                        <div>
+                            <div class="fw-bold">BẢNG GIÁ MỚI NHẤT</div>
+                            <small class="text-muted">Đại lý VinFast Bình Dương cam kết hỗ trợ khách hàng mua xe VinFast với giá tốt nhất...</small>
+                        </div>
+                    </a>
+                     <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <i class="bi bi-calculator-fill fs-3 me-3 text-primary"></i>
+                        <div>
+                            <div class="fw-bold">HỖ TRỢ TRẢ GÓP</div>
+                            <small class="text-muted">Kết nối khách hàng mua xe điện VinFast trả góp lãi suất thấp nhất, ban đầu bỏ số...</small>
+                        </div>
+                    </a>
+                     <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <i class="bi bi-clipboard-check-fill fs-3 me-3 text-primary"></i>
+                         <div>
+                            <div class="fw-bold">ĐĂNG KÝ LÁI THỬ</div>
+                            <small class="text-muted">Lái thử và cảm nhận các dòng xe VinFast miễn phí tại Đại lý VinFast Bình Dương. Liên hệ đặt lịch lái thử.</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

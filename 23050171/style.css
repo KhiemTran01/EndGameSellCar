@@ -1,0 +1,110 @@
+/* General styling */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.9rem;
+    color: #333;
+    background-color: #f8f9fa; /* Thêm màu nền nhẹ cho body */
+}
+
+/* Header */
+h1.h4 {
+    color: #004a99;
+}
+
+/* Table adjustments */
+.table th {
+    background-color: #e9ecef; /* Màu nền header table đậm hơn chút */
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+.table td, .table th {
+     vertical-align: middle;
+}
+.table-bordered {
+    border-color: #dee2e6;
+}
+
+/* Specifications Table */
+.specs-table td:first-child {
+    font-weight: 500;
+    color: #495057;
+}
+.specs-table td {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+.specs-table tr:nth-child(odd) > td {
+    background-color: rgba(0, 0, 0, 0.02); /* Nền sọc nhẹ hơn cho dễ đọc */
+}
+
+/* --- CSS cho Sidebar mới --- */
+.sidebar-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.sidebar-card i.fa-2x { /* class fa-2x của Font Awesome */
+    font-size: 1.75em; /* Điều chỉnh kích thước icon */
+    color: #0d6efd; /* Màu primary của Bootstrap */
+    margin-top: 0.125rem;
+    width: 2rem; /* Đảm bảo icon có không gian cố định */
+    text-align: center;
+}
+.sidebar-card h3.h6 { /* Nhắm mục tiêu chính xác hơn */
+    font-size: 0.9rem;
+    color: #212529; /* Màu chữ tiêu đề */
+    margin-bottom: 0.25rem; /* Giảm khoảng cách dưới tiêu đề */
+}
+.sidebar-card p.small {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #6c757d; /* Màu text-muted của Bootstrap */
+}
+.custom-sidebar .sidebar-card:last-child {
+    margin-bottom: 0 !important;
+}
+/* --- Kết thúc CSS cho Sidebar mới --- */
+
+
+/* Form labels */
+.form-label.small {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+/* Adjust input/select height for sm size */
+.form-control-sm, .form-select-sm {
+    min-height: calc(1.5em + 0.5rem + 2px);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+}
+/* Make form labels slightly bolder */
+#price-form .form-label {
+    font-weight: 500;
+}
+
+
+/* --- CSS cho Thư viện ảnh --- */
+.gallery-image {
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  border: 1px solid #dee2e6; /* Thêm viền nhẹ */
+  padding: 2px; /* Khoảng đệm nhỏ quanh ảnh */
+  background-color: #fff;
+}
+.gallery-image:hover {
+  opacity: 0.85;
+  border-color: #adb5bd;
+}
+/* --- Kết thúc CSS cho Thư viện ảnh --- */
+
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .custom-sidebar { /* Đảm bảo áp dụng cho sidebar mới */
+        margin-top: 2rem;
+    }
+}
